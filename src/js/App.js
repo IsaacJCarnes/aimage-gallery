@@ -1,6 +1,6 @@
 import {
-  Routes,
-  Route
+  Outlet,
+  Link
 } from "react-router-dom";
 
 import '../css/App.css';
@@ -13,9 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <div id='Content'>
-        <Routes>
-        <Route exact path={basePath} element={<Gallery />}/>
-        </Routes>
+        <Outlet />
       </div>
     </div>
   );
