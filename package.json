@@ -2,7 +2,7 @@
   "name": "aimage_gallery",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://isaacjcarnes.github.io/aimage_gallery",
+  "homepage":"https://isaacjcarnes.github.io/aimage-gallery/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
