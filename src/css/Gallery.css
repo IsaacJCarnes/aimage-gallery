@@ -63,7 +63,14 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 
 @media (min-width: 600px) {
     :root{
+        --pic-cols: 5;
+        --margin-spc: 1vw;
+    }
+}
+
+@media (min-width: 800px) {
+    :root{
         --pic-cols: 6;
         --margin-spc: .825vw;
     }
-  }
+}
