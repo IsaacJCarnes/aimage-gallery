@@ -5,20 +5,17 @@
 #HeaderArea{
     display: flex;
     height: 100%;
-    width: 75%;
+    width: 70%;
     background-color: rgb(10, 10, 10);
 }
 #HeaderArea::after{
     content: '';
     position: absolute;
-    left: 75%;
-    height: 0px;
-    width: 0px;
-    background-color: unset;
-    border-left: 0px solid transparent;
-    border-right: 15vw solid transparent;
-    border-bottom: 12vh solid rgb(10, 10, 10);
-    border-bottom-right-radius: 6px;
+    left: 70%;
+    height: 12vh;
+    width: 15vw;
+    background-color: rgb(10, 10, 10); 
+    border-bottom-right-radius: 100%;
 
 }
 #WebName{
