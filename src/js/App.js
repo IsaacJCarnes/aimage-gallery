@@ -6,7 +6,6 @@ import '../css/App.css';
 import Header from './Header';
 
 function App() {
-  const basePath = "/aimage-gallery/";
   return (
     <div className="App">
       <Header />
