@@ -14,8 +14,7 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    flex-shrink: 0;
-    flex-grow: 0;
+    flex: 1;
     justify-content: center;
     align-content: flex-start;
     overflow-y: scroll;
