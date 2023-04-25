@@ -14,15 +14,16 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    flex-shrink: 0;
+    flex-grow: 0;
     justify-content: center;
     align-content: flex-start;
-    /*
     overflow-y: scroll;
     scroll-behavior: smooth;
     margin-bottom: 20vw;
     margin-bottom: calc(80vw/var(--pic-cols)*2);
     margin-top: 1vw;
-    margin-top: var(--margin-spc);*/
+    margin-top: var(--margin-spc);
 }
 
 #Gallery::-webkit-scrollbar{
