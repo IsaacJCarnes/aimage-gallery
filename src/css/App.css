@@ -8,6 +8,7 @@
     height: 87vh;
     width: 100vw;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    overflow: hidden;
+    overflow-y: hidden;
 }
