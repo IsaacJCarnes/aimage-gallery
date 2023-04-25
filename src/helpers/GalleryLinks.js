@@ -52,5 +52,4 @@ const galleryLinks = [
     ar: "1:1",
   },
 ];
-
 export { galleryLinks };

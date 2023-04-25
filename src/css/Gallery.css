@@ -11,6 +11,7 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 #Gallery{
     width: 90vw;
     height: 84vh;
+    margin-bottom: 20vw;
     margin-bottom: calc(80vw/var(--pic-cols)*2);
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +20,7 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     align-content: flex-start;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    margin-top: 1vw;
     margin-top: var(--margin-spc);
 }
 
@@ -29,6 +31,7 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 .galleryFrame{
     display: flex;
     justify-content: center;
+    margin: 1vw;
     margin: var(--margin-spc);
 }
 
@@ -38,11 +41,22 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 }
 
 .tallImage{
+    width: 20vw;
+    height: 40vw;
     width: calc(80vw/var(--pic-cols));
     height: calc(80vw/var(--pic-cols)*2);
 }
 
+.wideImage{
+    width: 40vw;
+    height: 20vw;
+    width: calc(80vw/var(--pic-cols)*2);
+    height: calc(80vw/var(--pic-cols));
+}
+
 .squareImage{
+    width: 40vw;
+    height: 40vw;
     width: calc(80vw/var(--pic-cols)*2);
     height: calc(80vw/var(--pic-cols)*2);
 }
