@@ -20,6 +20,19 @@ function Gallery() {
     }
     return (
       <div className={"galleryFrame " + imgType} key={"galleryImage" + i}>
+          <img
+            className="galleryImage"
+            alt=""
+            src={imageData.link}
+            effect="blur"
+          />
+      </div>
+    );
+  });
+
+  /*
+  return (
+      <div className={"galleryFrame " + imgType} key={"galleryImage" + i}>
         <Suspense fallback={<div className="galleryImage"></div>}>
           <LazyLoadImage
             className="galleryImage"
@@ -30,7 +43,7 @@ function Gallery() {
         </Suspense>
       </div>
     );
-  });
+    */
 
   useEffect(() => {
     var tempArr = galleryLinks;
