@@ -51,5 +51,44 @@ const galleryLinks = [
     link: "https://cdn.midjourney.com/7ba5f97d-0f8c-4ac2-968f-86c037a4a469/0_0.webp",
     ar: "1:1",
   },
+  {
+    link: "https://cdn.midjourney.com/82efaefd-c36b-4788-9690-91519227f2cb/0_1.webp",
+    ar: "1:2",
+  },
+  {
+    link: "https://cdn.midjourney.com/7a73d338-3cba-4165-a45f-587322dee698/0_0.webp",
+    ar: "1:2",
+  },
+  {
+    link: "https://cdn.midjourney.com/ca7763f7-f31d-4090-bd1b-118dc6e6dc14/0_1.webp",
+    ar: "1:1",
+  },
+  {
+    link: "https://cdn.midjourney.com/48a8db31-ff99-464f-b7dc-e2275fb4b048/0_0.webp",
+    ar: "1:1",
+  },
+  {
+    link: "https://cdn.midjourney.com/d11a8775-3920-4713-9c4c-90d095bcdfe7/grid_0.webp",
+    ar: "1:2",
+  },
+  {
+    link: "https://cdn.midjourney.com/71eb021d-17a0-4077-8e89-ce492a07a425/grid_0.webp",
+    ar: "1:2",
+  },
+  {
+    link: "https://cdn.midjourney.com/fcee5f24-3134-4fe9-98df-0ac834935c82/grid_0.webp",
+    ar: "1:2",
+  },
+  {
+    link: "https://cdn.midjourney.com/1838b2d0-5385-46d3-8aa0-0d0638a73e75/grid_0.webp",
+    ar: "1:2",
+  },
 ];
+
+/*
+{
+  link: "",
+  ar: "",
+},
+*/
 export { galleryLinks };
