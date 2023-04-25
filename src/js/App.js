@@ -1,11 +1,9 @@
 import {
   Outlet,
-  Link
 } from "react-router-dom";
 
 import '../css/App.css';
 import Header from './Header';
-import Gallery from './Gallery';
 
 function App() {
   const basePath = "/aimage-gallery/";
