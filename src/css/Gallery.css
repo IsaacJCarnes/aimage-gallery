@@ -136,8 +136,8 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 
 #LargeImage{
     padding: 0vmin 2.5vmin 2vmin 2.5vmin;
-
     align-self: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #LargeImage.squareImage{
