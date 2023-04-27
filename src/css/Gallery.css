@@ -8,6 +8,15 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     --margin-spc: 1.25vw;
 }
 
+#PictureContent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
 #Gallery{
     width: 90vw;
     height: 84vh;
@@ -45,29 +54,105 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 }
 
 .galleryImage{
+    cursor: pointer;
     height:100%;
     width: auto;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.tallImage{
+.galleryFrame.tallImage{
     width: 20vw;
     height: 40vw;
     width: calc(80vw/var(--pic-cols));
     height: calc(80vw/var(--pic-cols)*2);
 }
 
-.wideImage{
+.galleryFrame.wideImage{
     width: 40vw;
     height: 20vw;
     width: calc(80vw/var(--pic-cols)*2);
     height: calc(80vw/var(--pic-cols));
 }
 
-.squareImage{
+.galleryFrame.squareImage{
     width: 40vw;
     height: 40vw;
     width: calc(80vw/var(--pic-cols)*2);
     height: calc(80vw/var(--pic-cols)*2);
+}
+
+.visibleElem{
+    display: flex;
+}
+
+.invisibleElem{
+    display: none;
+}
+
+#LargeSpace{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    background-color: rgba(26, 26, 26, 0.8);
+    width: 100vw;
+    height: 100vh;
+}
+
+#LargeFrame{
+    background-color: rgb(37, 37, 37);
+    background: linear-gradient(rgb(37,37,37) 70%, rgb(10,10,10)), url(../helpers/noise.svg);
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    width: fit-content;
+    height: fit-content;
+}
+
+#TitleTab{
+    display: flex;
+    cursor: default;
+    position: relative;
+    background-color: rgb(10, 10, 10);
+    background: linear-gradient(rgb(10,10,10), rgb(37, 37, 37)), url(../helpers/noise.svg);
+    color: white;
+    height: 18px;
+    padding-top: 1vmin;
+    padding-bottom: 1.5vmin;
+    padding-left: 2vmin;
+    justify-self: flex-start;
+    font-family: var(--common-font);
+    font-size: large;
+    z-index: 1;
+}
+
+#CloseBtn{
+    position: absolute;
+    right: 2vmin;
+    cursor: pointer;
+}
+
+#LargeImage{
+    padding: 0vmin 2.5vmin 2vmin 2.5vmin;
+
+    align-self: center;
+}
+
+#LargeImage.squareImage{
+    height:88vmin;
+    width: auto;
+}
+
+#LargeImage.tallImage{
+    height:88vmin;
+    width: auto;
+}
+
+#LargeImage.wideImage{
+    width: 88vmin;
+    height:auto;
 }
 
 @media (min-width: 600px) {
@@ -81,5 +166,20 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     :root{
         --pic-cols: 6;
         --margin-spc: .825vw;
+    }
+
+    #LargeImage.squareImage{
+        height:68vmin;
+        width: auto;
+    }
+    
+    #LargeImage.tallImage{
+        height:68vmin;
+        width: auto;
+    }
+    
+    #LargeImage.wideImage{
+        width: 68vmin;
+        height:auto;
     }
 }

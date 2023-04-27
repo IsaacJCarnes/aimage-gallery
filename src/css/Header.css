@@ -19,9 +19,10 @@
 
 }
 #WebName{
+    cursor: default;
     align-self: center;
     margin-left: 5vw;
     font-size: 4vmin;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--common-font);
     color: white;
 }
