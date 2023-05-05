@@ -32,12 +32,13 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     flex-direction: row;
     justify-content: center;
     align-content: flex-start;
-    overflow-y: scroll;
+    overflow: scroll;
     scroll-behavior: smooth;
     margin: 0px;
     padding: 0px;
-    margin-bottom: 20vw;
-    margin-bottom: calc(80vw/var(--pic-cols)*2);
+    padding-bottom: 20vw;
+    padding-bottom: calc(80vw/var(--pic-cols)*2);
+    margin-bottom: 1vw;
     margin-top: 1vw;
     margin-top: var(--margin-spc);
 }
@@ -109,6 +110,7 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     justify-content:flex-start;
     width: fit-content;
     height: fit-content;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #TitleTab{
@@ -126,6 +128,7 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     font-family: var(--common-font);
     font-size: large;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #CloseBtn{
