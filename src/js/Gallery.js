@@ -47,7 +47,7 @@ function Gallery() {
 
   return (
     <div id="PictureContent">
-      <div id="Gallery">{galleryImages}</div>
+      <div id="Gallery">{galleryImages}<div id="BlankSpace"/></div>
       <div
         id="LargeSpace"
         onClick={(e) => {
