@@ -161,7 +161,7 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 #BlankSpace{
     width: 100%;
     height: 20vw;
-    height: calc(80vw/var(--pic-cols));
+    height: calc(80vw/var(--pic-cols)*2/3);
 }
 
 @media (min-width: 600px) {
