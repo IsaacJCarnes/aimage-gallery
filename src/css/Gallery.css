@@ -55,8 +55,9 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 }
 
 .galleryImage{
+    object-fit: cover;
     cursor: pointer;
-    height:100%;
+    height: 100%;
     width: auto;
     -webkit-tap-highlight-color: transparent;
 }
@@ -79,6 +80,13 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     width: 40vw;
     height: 40vw;
     width: calc(80vw/var(--pic-cols)*2);
+    height: calc(80vw/var(--pic-cols)*2);
+}
+
+.galleryFrame.twoThirdsImage{
+    width: 27vw;
+    height: 40vw;
+    width: calc(80vw/var(--pic-cols)*1.5);
     height: calc(80vw/var(--pic-cols)*2);
 }
 
@@ -157,6 +165,11 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     width: 88vmin;
     height:auto;
 }
+#LargeImage.twoThirdsImage{
+    width: 59vmin;
+    height:88vmin;
+}
+
 
 #BlankSpace{
     width: 100%;
@@ -190,5 +203,10 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     #LargeImage.wideImage{
         width: 68vmin;
         height:auto;
+    }
+
+    #LargeImage.twoThirdsImage{
+        height:68vmin;
+        width: 46vmin;
     }
 }
