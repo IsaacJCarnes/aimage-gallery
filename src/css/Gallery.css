@@ -172,8 +172,8 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 
 #BlankSpace{
     width: 100%;
-    height: 20vw;
-    height: calc(80vw/var(--pic-cols));
+    height: 25vw;
+    height: calc(80vw/var(--pic-cols)*1.3);
 }
 
 @media (min-width: 600px) {
@@ -207,5 +207,10 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     #LargeImage.twoThirdsImage{
         height:68vmin;
         width: 46vmin;
+    }
+
+    #BlankSpace{
+        width: 100%;
+        height: 0vw;
     }
 }
