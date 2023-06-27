@@ -11,6 +11,8 @@ function Gallery() {
   const galleryImages = useMemo(
     () =>
       photoData.map((imageData, i) => {
+        let width = parseInt(imageData.size.split('x')[0]);
+        let height = parseInt(imageData.size.split('x')[1]);
         return (
           <div
             className={"galleryFrame " + imageData.imgType}
@@ -20,6 +22,8 @@ function Gallery() {
               className="galleryImage"
               loading="lazy"
               alt=""
+              width={width}
+              height={height}
               src={imageData.link}
               onClick={(e) => {
                 e.preventDefault();
@@ -72,7 +76,7 @@ function Gallery() {
             </div>
           </div>
           <img
-            alt="Chosen Large Image"
+            alt="Selection Area"
             id="LargeImage"
             className={isPictureChosen ? photoData[chosenImage].imgType : ""}
             src={isPictureChosen ? photoData[chosenImage].link : ""}
