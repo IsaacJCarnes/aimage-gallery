@@ -62,32 +62,43 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     -webkit-tap-highlight-color: transparent;
 }
 
-.galleryFrame.tallImage{
+.galleryFrame{
+    padding: 5px;
+}
+
+.galleryFrame.image1-2{
     width: 20vw;
     height: 40vw;
     width: calc(80vw/var(--pic-cols));
     height: calc(80vw/var(--pic-cols)*2);
 }
 
-.galleryFrame.wideImage{
+.galleryFrame.image2-1{
     width: 40vw;
     height: 20vw;
     width: calc(80vw/var(--pic-cols)*2);
     height: calc(80vw/var(--pic-cols));
 }
 
-.galleryFrame.squareImage{
+.galleryFrame.image1-1{
     width: 40vw;
     height: 40vw;
     width: calc(80vw/var(--pic-cols)*2);
     height: calc(80vw/var(--pic-cols)*2);
 }
 
-.galleryFrame.twoThirdsImage{
+.galleryFrame.image2-3{
     width: 27vw;
     height: 40vw;
-    width: calc(80vw/var(--pic-cols)*1.5);
+    width: calc(80vw/var(--pic-cols)*1.33);
     height: calc(80vw/var(--pic-cols)*2);
+}
+
+.galleryFrame.image3-2{
+    width: 27vw;
+    height: 40vw;
+    width: calc(80vw/var(--pic-cols)*2);
+    height: calc(80vw/var(--pic-cols)*1.33);
 }
 
 .visibleElem{
@@ -151,23 +162,27 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
     -webkit-tap-highlight-color: transparent;
 }
 
-#LargeImage.squareImage{
+#LargeImage.image1-1{
     height:88vmin;
     width: auto;
 }
 
-#LargeImage.tallImage{
+#LargeImage.image1-2{
     height:88vmin;
     width: auto;
 }
 
-#LargeImage.wideImage{
+#LargeImage.image2-1{
     width: 88vmin;
     height:auto;
 }
-#LargeImage.twoThirdsImage{
+#LargeImage.image2-3{
     width: 59vmin;
     height:88vmin;
+}
+#LargeImage.image3-2{
+    width: 88vmin;
+    height:59vmin;
 }
 
 #BlankSpace{
@@ -186,27 +201,32 @@ margin-spc is margin for each picture, should be about (10vw/pic-cols/2)
 @media (min-width: 800px) {
     :root{
         --pic-cols: 6;
-        --margin-spc: .825vw;
+        --margin-spc: 0vw;
     }
 
-    #LargeImage.squareImage{
+    #LargeImage.image1-1{
         height:68vmin;
         width: auto;
     }
     
-    #LargeImage.tallImage{
+    #LargeImage.image1-2{
         height:68vmin;
         width: auto;
     }
     
-    #LargeImage.wideImage{
+    #LargeImage.image2-1{
         width: 68vmin;
         height:auto;
     }
 
-    #LargeImage.twoThirdsImage{
+    #LargeImage.image2-3{
         height:68vmin;
         width: 46vmin;
+    }
+
+    #LargeImage.image3-2{
+        height:46vmin;
+        width: 68vmin;
     }
 
     #BlankSpace{

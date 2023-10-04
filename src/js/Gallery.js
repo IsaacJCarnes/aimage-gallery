@@ -7,15 +7,42 @@ function Gallery() {
 
   const [isPictureChosen, setIsPictureChosen] = useState(false);
   const [chosenImage, setChosenImage] = useState(0);
+  
+  const sortByType = (arr) => {
+    return arr.sort((a, b) => {
+      if(a['format'] === "wide" && b['format'] !== "wide"){
+        return 1;
+      }
+      else {
+        return -1
+      }
+    })
+  }
+  
+// main function
+function simplify(str) {
+  var result = '', data = str.split('/'),
+      numOne = Number(data[0]),
+      numTwo = Number(data[1]);
+  for (var i = Math.max(numOne, numTwo); i > 1; i--) {
+  if ((numOne % i === 0) && (numTwo % i === 0)) {
+      numOne /= i;
+      numTwo /= i;
+  }
+  }
+  result = "image"+numOne.toString() + '-' + numTwo.toString()
+  return result
+}
 
   const galleryImages = useMemo(
     () =>
-      photoData.map((imageData, i) => {
+      sortByType(photoData).map((imageData, i) => {
+        console.log(imageData['ar'])
         let width = parseInt(imageData.size.split('x')[0]);
         let height = parseInt(imageData.size.split('x')[1]);
         return (
           <div
-            className={"galleryFrame " + imageData.imgType}
+            className={`galleryFrame  ${imageData['ar']}`}
             key={"galleryImage" + i}
           >
             <img
@@ -46,6 +73,11 @@ function Gallery() {
       tempArr[i] = tempArr[j];
       tempArr[j] = tempNum;
     }
+    for (i = 0; i < tempArr.length; i++) {
+      let width = parseInt(tempArr[i]['size'].split('x')[0]);
+      let height = parseInt(tempArr[i]['size'].split('x')[1]);
+      tempArr[i].ar = simplify(`${width}/${height}`)
+    }
     setPhotoData(tempArr);
   }, []);
 
@@ -62,7 +94,7 @@ function Gallery() {
       >
         <div
           id="LargeFrame"
-          className={isPictureChosen ? photoData[chosenImage].imgType : ""}
+          className={isPictureChosen ? `${photoData[chosenImage].ar}` : ""}
         >
           <div id="TitleTab">
             <div
@@ -78,7 +110,7 @@ function Gallery() {
           <img
             alt="Selection Area"
             id="LargeImage"
-            className={isPictureChosen ? photoData[chosenImage].imgType : ""}
+            className={isPictureChosen ? photoData[chosenImage].ar : ""}
             src={isPictureChosen ? photoData[chosenImage].link : ""}
           />
         </div>
